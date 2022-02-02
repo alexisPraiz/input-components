@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+/*---==== General Styles: Start ====---*/
+*{  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --body-color: #fff;
+    --navBar-color: #F6F5FF;
+    --text-color: #707070;
+    --mode-hover: #2B2B2B;
+    --a-color: #B2B1B9;
+    --a-hover: #6998AB;
+    --bold-color--highlight: #000957;
+    --span-color: #FFA400;
+    --label-color: #000;
+}
+body{
+    font-family: 'Poppins';
+    background: var(--body-color);
+    transition: background .4s ease;
+}
+body.dark{
+    --body-color: #18191A;
+    --navBar-color: #232526;
+    --text-color: #AAA;
+    --mode-hover: #3A3B3C;
+    --a-color: #BBB;
+    --bold-color--highlight: #11468F;
+    --span-color: #D98C00;
+    --label-color: #fff;
+}
+.main{
+    display: grid;
+    row-gap: 30px;
+    position: relative;
+    left: 230px;
+    width: calc(100% - 230px);
+    transition: all .4s ease;
+    padding: 30px;
+}
+body.dark .main .title{
+    color: #fff
+}
+.footer{
+    font-size: 11px;
+    text-align: center;
+    color: var(--text-color);
+}
+/*---==== Principal: Start ===---*/
+.main .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #2B2B2B
+}
+/*template1: start*/
+.template1{
+    display: grid;
+    grid-template-columns: repeat(3,max-content);
+    column-gap: 50px;
+    row-gap: 30px
+}
+.input_conteiner,
+.template3_input-conteiner{
+    display: flex;
+    flex-direction: column;
+}
+.input_conteiner span,
+.template3_input-conteiner span{
+    font-size: 11px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+.input_conteiner label,
+.template3_input-conteiner label{
+    font-size: 12px;
+    color: var(--label-color);
+    font-weight: 500;
+}
+.input_conteiner .default{
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+}
+.input_conteiner .default::placeholder{
+    color: var(--text-color);
+}
+.input_conteiner .label_blue{
+    color: #48e;
+}
+.input_conteiner .blue{
+    border: 1px solid #48e;
+}
+.input_conteiner .label_red{
+    color: #FF2442;
+}
+.input_conteiner .red{
+    border: 1px solid #FF2442;
+}
+/*template1: end*/
+
+/*template2: start*/
+.template2{
+    display: grid;
+    grid-template-columns: repeat(2,max-content);
+    column-gap: 80px;
+    row-gap: 30px;
+}
+.template2 .input_conteiner #prue{
+    position: relative;
+}
+.input_conteiner p{
+    font-size: 10px;
+}
+.template2 .input_conteiner .relative{
+    position: relative;
+}
+.template2 .input_conteiner i{
+    font-size: 20px;
+    color: var(--text-color);
+    transform: translate(150px,-35px);
+}
+.template2 .personalized_column1{
+    grid-column: span 2;
+}
+/*template2: end*/
+
+/*template3: start*/
+.template3{
+    display: grid;
+    row-gap: 30px;
+}
+.template3_input-conteiner input,
+.template3 .textarea{
+    width: 100%;
+    height: 50px;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    background: transparent;
+}
+.template3 .textarea{
+    width: 200px;
+    height: 200px;
+    resize: none;
+}
+/*template3: end*/
+/*---==== Principal: End ===---*/
+
+/*---==== Responsive desing ====---*/
+@media screen and (max-width: 500px){
+    .main{
+        padding: 10px;
+    }
+    .template1,
+    .template2,
+    .template3{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

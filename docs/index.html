@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navBar.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Input component</title>
+</head>
+<body>
+     <!---==== Nav Bar: Start ====--->
+     <nav class="nav_bar">
+        <div class="nav_bar-top">
+            <p><span>Dev</span>challenge.io</p>
+            <i class='bx bxs-x-circle open-close'></i>
+        </div>
+
+        <div class="nav_bar-buttom">
+            <ul>
+                <li><a href="#">Colors</a></li>
+                <li><a href="#">Typograpy</a></li>
+                <li><a href="#">Spaces</a></li>
+                <li><a href="https://alexispraiz.github.io/buttons-component/">Buttons</a></li>
+                <li><a href="#" class="anchor_active">Inputs</a></li>
+                <li><a href="#">Grid</a></li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <span class="mode-text">Dark Mode</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy;Created by <b>Alexis Praiz</b> - Devchallege.io</p>
+        </div>
+    </nav>
+    <!---==== Nav Bar: End ====--->
+    
+    <!---==== Open-Close navBar: Start ====--->
+    <div class="open_bar-nav">
+        <i class='bx bx-dots-vertical-rounded open_nav open-close'></i>
+    </div>
+    <!---==== Open-close navBar: End ====--->
+    
+    <main class="main">
+        <span class="title">Inputs</span>
+        
+        <!---==== Template1: Start ====--->
+        <div class="template1">
+            <div class="input_conteiner">
+                <span>< Input/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+
+            <div class="input_conteiner">
+                <span>&:hover</span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+
+            <div class="input_conteiner">
+                <span>&:focus</span>
+                <label  class="label_blue">Label</label>
+                <input type="text" placeholder="Placeholder" class="default blue">
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input error/></span>
+                <label class="label_red">Label</label>
+                <input type="text" placeholder="Placeholder" class="default red">
+            </div>
+
+            <div class="input_conteiner">
+                <span>&:hover</span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+
+            <div class="input_conteiner">
+                <span>&:focus</span>
+                <label  class="label_red">Label</label>
+                <input type="text" placeholder="Placeholder" class="default red">
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input disabled/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+        </div>
+        <!---==== Template1: End ====--->
+        
+        <!---==== Template2: Start ====--->
+        <div class="template2">
+            <div class="input_conteiner">
+                <span>< Input helpertext="Some interesting text"/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+                <p>Some interesting text</p>
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input helpertext="Some interesting text" error/></span>
+                <label class="label_red">Label</label>
+                <input type="text" placeholder="Placeholder" class="default red">
+                <p class="label_red">Some interesting text</p>
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input startIcon/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default relative">
+                <i class='bx bxs-phone icon phone'></i>
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input endIcon/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default relative">
+                <i class='bx bxs-lock icon lock'></i>
+            </div>
+
+            <div class="personalized_column1">
+                <div class="input_conteiner">
+                    <span>< Input value="text"/></span>
+                    <label>Label</label>
+                    <input type="text" value="Text" class="default">
+                </div>
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input size="sm"/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input size="md"/></span>
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder" class="default">
+            </div>
+        </div>
+        <!---==== Template2: End ====--->
+            
+        <!---==== Template3: Start ====--->
+        <div class="template3">
+            <div class="template3_input-conteiner">
+                <span>< Input fullwidth/></span>
+                <label>Label</label>
+                <input type="text" value="Text">
+            </div>
+
+            <div class="input_conteiner">
+                <span>< Input multiline rows="4"/></span>
+                <label>Label</label>
+                <textarea placeholder="Placeholder" class="textarea"></textarea>
+            </div>
+        </div>
+        <!---==== Template3: End ====--->
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>

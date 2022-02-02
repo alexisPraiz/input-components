@@ -1,0 +1,142 @@
+/*---==== Nav bar: Start ====---*/
+.nav_bar{
+    width: 230px;
+    height: 100%; 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 100px;
+    padding: 15px;
+    background: var(--navBar-color);
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;  
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all .3s ease;
+}
+.nav_bar-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_bar-top p{
+    color: var(--bold-color--highlight);
+    font-weight: 800;
+}
+.nav_bar-top span{
+    color: var(--span-color);
+}
+.nav_bar-top i{
+    font-size: 18px;
+    color: var(--bold-color--highlight);
+    cursor: pointer;
+}
+.nav_bar-buttom ul{
+    display: grid;
+    row-gap: 15px;
+    list-style: none;
+}
+.nav_bar-buttom ul li a{
+    color: var(--a-color);
+    text-decoration: none;
+    transition: font-size .1s ease;
+}
+.nav_bar-buttom ul li .anchor_active{
+    color: var(--bold-color--highlight);
+    font-size: 17px;
+}
+.nav_bar-buttom ul li a:not(.anchor_active):hover{
+    color: var(--a-hover);
+    font-size: 16.5px;
+}
+.btn_mode-conteiner{
+    justify-self: end;
+}
+.mode{
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    padding: 0 5px;
+    background: var(--navBar-color);
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background .1s ease;
+}
+.mode .moon-sun{
+    width: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.mode i{
+    position: absolute;
+    font-size: 14px;
+    transition: opacity .1s ease;
+}
+.mode i.sun{
+    opacity: 0;
+}
+.mode:hover{
+    color: #fff;
+    background: var(--mode-hover);
+}
+/*---==== Nav bar: End ====---*/
+
+/*---==== Open-Close navBar: Start ====---*/
+.open_bar-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    width: 55px;
+    height: 100vh;
+    background: var(--navBar-color);
+    text-align: center;
+    opacity: 0;
+    transition: opacity .6s ease-out;
+    pointer-events: none;
+}
+.open_nav{
+    font-size: 25px;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-top: 20px;
+}
+/*---==== Open-Close navBar: End ====---*/
+
+/*---==== Nav Bar responsive ====---*/
+@media screen and (max-width: 600px){
+    .nav_bar{
+        row-gap: 70px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .nav_bar{
+        row-gap:  60px;
+    }
+    .nav_bar-top i{
+        font-size: 16px;
+    }
+    .nav_bar-top p,
+    .nav_bar-top span{
+        font-size: 14px;
+    }
+    .nav_bar-buttom ul{
+        row-gap: 10px;
+    }
+    .nav_bar-buttom ul li a{
+        font-size: 15px;
+    }
+    .mode{
+        font-size: 12px;
+    }
+    .mode .moon-sun{
+        height: 25px;
+    }
+}
